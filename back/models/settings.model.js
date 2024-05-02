@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const moment = require("moment");
-const helpers = require("../config/functions");
 
 const settingsSchema = mongoose.Schema({
   timePerBooking: {
@@ -78,12 +77,6 @@ const settingsSchema = mongoose.Schema({
       enum: ["custom", "visibility", "order", "booking"],
     },
 
-    modules: [{
-      type: String,
-      enum: helpers.MODULES,
-      default: []
-    }],
-
     paimentPeriod: {
       type: String,
       enum: ["monthly", "quarterly", "semi-annually", "annually"],
@@ -102,21 +95,21 @@ const settingsSchema = mongoose.Schema({
       default: "USD"
     },
 
-    monthlyPrice: {
-      type: Number,
-      default: () =>
-        // get the pack's price
-        helpers.PACKS
-          .find(p => p.name == this.packName)
-          ?.price.find(p => p.currency == this.currency)
-          ?.price
-        ||
-        // get the module's price if it's "costum"
-        helpers.MODULES_BY_PACK
-          .find(m => m.name == this.modules[0])
-          ?.price.find(p => p.currency == this.currency)
-          ?.price
-    },
+    // monthlyPrice: {
+    //   type: Number,
+    //   default: () =>
+    //     // get the pack's price
+    //     helpers.PACKS
+    //       .find(p => p.name == this.packName)
+    //       ?.price.find(p => p.currency == this.currency)
+    //       ?.price
+    //     ||
+    //     // get the module's price if it's "costum"
+    //     helpers.MODULES_BY_PACK
+    //       .find(m => m.name == this.modules[0])
+    //       ?.price.find(p => p.currency == this.currency)
+    //       ?.price
+    // },
 
     totalMonths: {
       type: Number,

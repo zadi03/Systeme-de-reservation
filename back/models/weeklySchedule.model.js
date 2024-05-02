@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const moment = require("moment");
+
+
 const weeklyScheduleSchema = mongoose.Schema({
+  
   dayName: {
     type: String,
     enum: [
@@ -50,6 +53,7 @@ const weeklyScheduleSchema = mongoose.Schema({
     type: String,
     default: ''
   },
+
 
 
   shift: [

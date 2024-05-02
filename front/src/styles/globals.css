@@ -1,0 +1,207 @@
+
+/* calendar styling */
+.react-calendar {
+  width: 100% !important;
+  background-color: black !important;
+  color: white !important;
+  border-radius: 5px;
+  color: black;
+}
+.react-calendar__navigation {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 5px;
+}
+.react-calendar__navigation button{
+  background-color: black !important;
+  font-size: 16px;
+  color: white !important;
+  /* border-radius: 5px; */
+}
+.react-calendar__navigation button:disabled{
+  background-color: rgb(138, 138, 138) !important;
+  color: white !important;
+}
+.react-calendar__navigation button:hover{
+  background-color: rgb(73, 73, 73) !important;
+  color: white !important;
+}
+.react-calendar__viewContainer {
+  background-color: black !important;
+}
+
+.react-calendar__month-view__days__day {
+  background-color: black !important;
+  color: white !important;
+  cursor: pointer;
+}
+.react-calendar__month-view__days__day:disabled {
+  background-color: rgb(138, 138, 138) !important;
+  cursor: not-allowed;
+}
+.react-calendar__month-view__days__day:not(:disabled):hover {
+  background-color: rgb(73, 73, 73) !important;
+}
+
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  background-color: rgb(73, 73, 73) !important;
+}
+
+/* selected day style */
+.react-calendar__tile--active,
+.react-calendar__tile--now.react-calendar__tile--active {
+  background-color: rgb(255, 70, 70) !important;
+  color: white !important;
+}
+
+/* arrows and title */
+
+/* label background */
+.react-calendar__navigation__label {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* colors from the nav */
+.react-calendar__navigation button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:disabled {
+  color: #ccc;
+}
+
+/* numbers of days */
+.react-calendar__tile {
+  padding: 0.75em;
+  font-size: 15px;
+  background-color: white;
+}
+
+/* weekend day style */
+.react-calendar__tile--weekend {
+  color: rgb(0, 0, 0);
+}
+/* weekend days */
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend{
+  color: black;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.css-1hw9brq-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  height: 50px !important;
+  background-color: black !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+border: 1px solid rgb(205, 204, 204);
+}  
+
+
+.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border: transparent !important;
+  outline: none !important;
+}
+/* HHEERRREEEE */
+.react-calendar__tile.react-calendar__year-view__months__month:not(:disabled){
+  background-color: black !important;
+  color:white !important;
+}
+.react-calendar__tile.react-calendar__year-view__months__month:hover {
+  color: black !important;
+  background-color: rgb(219, 219, 219) !important; 
+}
+
+
+.react-calendar__tile.react-calendar__decade-view__years__year{
+  background-color: black ;
+  color: white ;
+}
+.react-calendar__tile.react-calendar__decade-view__years__year:hover {
+  color: black !important; 
+}
+
+
+.react-calendar__tile.react-calendar__century-view__decades__decade{
+   background-color: black;
+   color: white;
+}
+
+/* .react-calendar__tile.react-calendar__century-view__decades__decade{
+  background-color: black !important;
+  color: white !important;
+} */
+
+/* .MuiTouchRipple-root.css-8je8zh-MuiTouchRipple-root{
+  background-color: blueviolet !important;
+  width: auto;
+  color: blue !important;
+} */
+
+/* scrollbar style ._. */
+::-webkit-scrollbar {
+  display: none;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  min-width: 50px !important;
+  margin-left: -7px;
+ 
+}
+.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list{
+  width: 50px !important; 
+}
+
+
+
+
+
+
+
+#__next{
+  /* background-color: yellow; */
+  margin: -8px;
+}
+
+.custom-radio-button {
+  display: flex;
+  /* background-color: yellow; */
+}
+
+.custom-radio-button input[type="radio"] {
+  display: none; 
+}
+
+.custom-radio-button span {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 0px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.custom-radio-button span.radio-checked {
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  border-color: black;
+}
+.custom-radio-button span:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.custom-radio-button span:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+.react-calendar__tile.react-calendar__century-view__decades__decade:not(:disabled):hover{
+  color: black !important;
+}
+

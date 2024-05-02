@@ -1,19 +1,22 @@
 const mongoose = require("mongoose");
 const moment = require("moment");
-const uniqueValidator = require("mongoose-unique-validator");
 
-const uniqid = require("uniqid");
-const createStellarAccount = require("../config/stellar/createStellarAccount");
-const CryptoJS = require("crypto-js");
-const SocialMediaCover = require("./socialMediaCover.model");
-const translationsService = require("../config/translationsService");
-const {
-    listStyleResto,
-    listTypeCuisine,
-    listPaymentMethod,
-    listServices
-} = require("../data/restaurantCharacteristics");
-const helpers = require("../config/functions");
+// const uniqueValidator = require("mongoose-unique-validator");
+
+// const uniqid = require("uniqid");
+// const createStellarAccount = require("../config/stellar/createStellarAccount");
+// const CryptoJS = require("crypto-js");
+// const SocialMediaCover = require("./socialMediaCover.model");
+// const translationsService = require("../config/translationsService");
+// const {
+//     listStyleResto,
+//     listTypeCuisine,
+//     listPaymentMethod,
+//     listServices
+// } = require("../data/restaurantCharacteristics");
+
+
+// const helpers = require("../config/functions");
 
 const PointOfSaleSchema = mongoose.Schema(
     {
@@ -561,10 +564,10 @@ const PointOfSaleSchema = mongoose.Schema(
                 ref: "FileUpload"
             }
         ],
-        translations: {
-            type: Array,
-            default: []
-        },
+        // translations: {
+        //     type: Array,
+        //     default: []
+        // },
 
         packName: [{
             type: String,
@@ -572,11 +575,11 @@ const PointOfSaleSchema = mongoose.Schema(
             default: []
         }],
 
-        modules: [{
-            type: String,
-            enum: helpers.MODULES,
-            default: []
-        }],
+        // modules: [{
+        //     type: String,
+        //     enum: helpers.MODULES,
+        //     default: []
+        // }],
         summerTime: {
             type: Boolean,
             default: false
@@ -659,7 +662,7 @@ PointOfSaleSchema.pre("save", async function (next) {
                 if (this.description) objectToTranslate.description = this.description;
                 if (this.descriptionTitle) objectToTranslate.descriptionTitle = this.descriptionTitle;
 
-                this.translations = await translationsService.processTranslation({ ...objectToTranslate, ...s }, [...translationsService.targets, "fr"]);
+                // this.translations = await translationsService.processTranslation({ ...objectToTranslate, ...s }, [...translationsService.targets, "fr"]);
             } catch (e) {
                 console.log("____", e)
             }

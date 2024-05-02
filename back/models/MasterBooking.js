@@ -1,8 +1,6 @@
 const mongoose = require('mongoose')
 const moment = require('moment')
-const customerRepository = require('../../repositories/customer.repo')
 const Customer = require('../customer.model')
-const { convertToTimezone } = require('../../config/timezone')
 const PointOfSale = require('./pointOfSale.model')
 const axios = require('axios')
 const refundCharge = require('../../config/payzone/refundCharge')
